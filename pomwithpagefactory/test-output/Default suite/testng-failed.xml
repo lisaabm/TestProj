@@ -3,18 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.guru99.test.HomepageTest">
+      <class name="com.guru99.test.LoginTest">
         <methods>
-          <include name="elementsDisplayed"/>
-          <include name="validateReqQuotBtn"/>
-          <include name="launch"/>
-          <include name="validateReqProfileBtn"/>
-          <include name="validateRetQuotBtn"/>
+          <include name="checkElementsDisplayed"/>
           <include name="close"/>
-          <include name="validateLogouttBtn"/>
-          <include name="validateEditProfileBtn"/>
+          <include name="launch"/>
+          <include name="validateLogin"/>
+          <include name="validateInvalidEmailErrorMessage"/>
         </methods>
-      </class> <!-- com.guru99.test.HomepageTest -->
+      </class> <!-- com.guru99.test.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,6 +2,7 @@ package com.guru99.actions;
 
 import java.io.File;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -58,14 +59,14 @@ public class UtilityActionHelper {
      * @param driver
      * @throws Exception
      */
-	public void capturePageScreenshot(WebDriver driver) throws Exception {
+	public void ErrorPageScreenshot(WebDriver driver) throws Exception {
 		try {
 			String random = RandomStringUtils.randomAlphanumeric(10);
 			String fileNm = "FailedSS "+ random;
 			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			FileHandler.copy(src, new File(fileNm+".png"));
 		}catch (Exception e) {
-			throw new Exception("capturePageScreenshot (UtilityActionHelper) : "+e.getMessage());
+			throw new Exception("errorPageScreenshot (UtilityActionHelper) : "+e.getMessage());
 		}
 	}
 	/**
